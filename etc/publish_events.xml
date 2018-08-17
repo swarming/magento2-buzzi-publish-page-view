@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Swarming Technology, LLC. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Buzzi_Publish:etc/publish_events.xsd">
+    <buzzi>
+        <publish_event code="page_view">
+            <label>Page View</label>
+            <type>buzzi.ecommerce.page-view</type>
+            <packer_model>Buzzi\PublishPageView\Model\Packer</packer_model>
+        </publish_event>
+    </buzzi>
+</config>

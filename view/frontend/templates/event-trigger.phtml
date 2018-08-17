@@ -1,0 +1,21 @@
+<?php
+/**
+ * @var $block \Buzzi\PublishPageView\Block\EventTrigger
+ */
+?>
+
+<div class="buzzi-page-view-container" data-role="buzzi-page-view" data-bind="scope: 'buzzi-page-view'">
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "[data-role=buzzi-page-view]": {
+            "Buzzi_PublishPageView/js/event-trigger": {
+                "event_type": "<?= $block->escapeJs($block->getEventType()) ?>",
+                "page_id": "<?= $block->escapeJs($block->getPageId()) ?>",
+                "site_id": "<?= $block->escapeJs($block->getWebsiteCode()) ?>",
+                "category": "<?= $block->escapeJs($block->getCurrentCategoryName()) ?>"
+            }
+        }
+    }
+</script>
