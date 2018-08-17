@@ -26,10 +26,7 @@ define([
         },
 
         triggerEvent: function () {
-            var eventKey = this.site_id + ':' + this.page_id;
-            if (this.category) {
-                eventKey += ':' + eventKey;
-            }
+
 
             sendEvent(
                 this.event_type,
@@ -38,8 +35,16 @@ define([
                     site_id: this.site_id,
                     category: this.category
                 },
-                eventKey
+                this.getEventKey()
             );
+        },
+
+        getEventKey: function () {
+            var eventKey = this.site_id + ':' + this.page_id;
+            if (this.category) {
+                eventKey += ':' + this.category;
+            }
+            return eventKey;
         }
     });
 });
