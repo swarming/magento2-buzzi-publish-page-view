@@ -11,10 +11,10 @@
     {
         "[data-role=buzzi-page-view]": {
             "Buzzi_PublishPageView/js/event-trigger": {
-                "event_type": "<?= $block->escapeJs($block->getEventType()) ?>",
-                "page_id": "<?= $block->escapeJs($block->getPageId()) ?>",
-                "site_id": "<?= $block->escapeJs($block->getWebsiteCode()) ?>",
-                "category": "<?= $block->escapeJs($block->getCurrentCategoryName()) ?>"
+                "event_type": "<?= $block->escapeJsQuote($block->getEventType(), "\"") ?>",
+                "page_id": "<?= $block->escapeJsQuote($block->getPageId(), "\"") ?>",
+                "site_id": "<?= $block->escapeJsQuote($block->getWebsiteCode(), "\"") ?>",
+                "category": "<?= $block->escapeJsQuote($block->getCurrentCategoryName(), "\"") ?>"
             }
         }
     }
